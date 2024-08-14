@@ -1,0 +1,7 @@
+server:
+  port: 8090
+
+bank1:
+  hostname: "https://ppr-wallet.free.beeceptor.com/bank-1"
+  apikey: "secret123"
+  disbursementendpoint: "api/v1/disbursement"
