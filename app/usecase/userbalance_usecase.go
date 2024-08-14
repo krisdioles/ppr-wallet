@@ -89,6 +89,7 @@ func (u *UserBalanceUsecase) DisburseBalance(ctx context.Context, id int64) erro
 			AccountID:       strconv.Itoa(int(currentUserBalance.ID)),
 			TransactionName: "Balance disbursement",
 			DebitAmount:     currentUserBalance.Balance,
+			Folio:           createDisbursementResp.Data.ID,
 		}); err != nil {
 			log.Println("[DisburseBalance] Create journalentry debit err:", err)
 			return err
@@ -98,6 +99,7 @@ func (u *UserBalanceUsecase) DisburseBalance(ctx context.Context, id int64) erro
 			AccountID:       currentUserBalance.AccountNo,
 			TransactionName: "Balance disbursement",
 			CreditAmount:    currentUserBalance.Balance,
+			Folio:           createDisbursementResp.Data.ID,
 		}); err != nil {
 			log.Println("[DisburseBalance] Create journalentry credit err:", err)
 			return err
