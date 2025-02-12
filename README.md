@@ -1,7 +1,3 @@
-Certainly! Below is a sample GitHub `README.md` for a wallet application that provides an API to disburse the wallet balance.
-
----
-
 # Wallet Disbursement API
 
 Welcome to the **Wallet Disbursement API**. This application provides a simple API to disburse the balance from a user's wallet to an external bank account.
